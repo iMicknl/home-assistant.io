@@ -22,7 +22,7 @@ ha_codeowners:
 ha_domain: tahoma
 ---
 
-The `Somfy TaHoma` integration platform is used as an interface to the [tahomalink.com](https://www.tahomalink.com) website. It adds multiple devices from the Somfy TaHoma platform. 
+The `Somfy TaHoma` integration platform is used as an interface to the [tahomalink.com](https://www.tahomalink.com) website. It adds multiple devices from the Somfy TaHoma platform.
 
 ## Supported Somfy gateways
 
@@ -57,15 +57,16 @@ password:
 {% endconfiguration %}
 
 ## Options
-Somfy TaHoma options are set via Configuration -> Integrations -> Somfy TaHoma -> Options.
+
+Somfy TaHoma options are configured via Configuration -> Integrations -> Somfy TaHoma -> Options.
 
 ### Update Interval
-The Somfy TaHoma integration periodically retrieves new events. Change the update interval to a lower value if you want more frequent updates, for example when you also control your devices outside Home Assistant.
 
+The Somfy TaHoma integration periodically retrieves new events. Change the update interval to a lower value if you want more frequent updates, for example when you also control your devices outside Home Assistant.
 
 ## Supported Somfy devices
 
-This integrations doesn't use a hardcoded list of supported devices, but relies on the type plus available states and commands of the device. The table below shows all supported device types.
+This integrations doesn't use a hardcoded list of supported devices, but relies on the device category in combination with the available states and commands. The table below shows all supported device types and their mapping in Home Assistant.
 
 | Somfy ui_class / widget      | Home Assistant platform |
 | ---------------------------- | ----------------------- |
@@ -119,8 +120,9 @@ This integrations doesn't use a hardcoded list of supported devices, but relies 
 | Window                       | cover                   |
 | WindowHandle                 | binary_sensor           |
 
-If your device is not visible in the device list of Home Assistant (/config/devices/dashboard), you need to turn on [debug logging](https://www.home-assistant.io/integrations/logger/). Copy the debug string and create a [new issue](https://github.com/home-assistant/core/issues)
+If your device is not visible in the device list of Home Assistant (/config/devices/dashboard), you need to turn on [debug logging](https://www.home-assistant.io/integrations/logger/). Copy the debug string and create a [new issue](https://github.com/home-assistant/core/issues).
 
-`DEBUG (MainThread) [custom_components.tahoma] Unsupported TaHoma device (io:DimmableLightIOComponent - Light - DimmableLight).`
+`DEBUG (MainThread) [custom_components.tahoma] Unsupported TaHoma device (io:DimmableLightIOComponent - Light - DimmerLight).`
 
-If your device is listed in the device list, copy the firmware and create a [new issue](https://github.com/home-assistant/core/issues). (e.g. io:DimmableLightIOComponent)
+If your device is listed in Home Assistant but not working correctly, copy the device info from the devices page and create a [new issue](https://github.com/home-assistant/core/issues). (e.g. DimmerLight
+by Somfy, io:DimmableLightIOComponent)
