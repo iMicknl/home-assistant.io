@@ -36,7 +36,7 @@ Have a look at the list of [supported Somfy devices](#Supported-Somfy-devices) i
 
 Home Assistant offers the Somfy TaHoma integration through Configuration -> Integrations -> Somfy TaHoma. Enter your email address and password for tahomalink.com to configure this integration.
 
-Alternatively, Home Assistant will also load Somfy TaHoma via the configuration.yaml. Add the following to your configuration.yaml file:
+Alternatively, Home Assistant will also load Somfy TaHoma via the `configuration.yaml`. Add the following to your `configuration.yaml` file:
 
 ```yaml
 # Example configuration.yaml entry
