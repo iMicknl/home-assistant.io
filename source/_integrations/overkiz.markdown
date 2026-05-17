@@ -99,6 +99,19 @@ Verify SSL:
 
 This integration retrieves data from Overkiz every 30 seconds to ensure timely updates. If you only have stateless devices (RTS protocol), the integration will poll for new data every hour to reduce unnecessary load on the Overkiz API.
 
+## Actions
+
+### Action: Set cover position and tilt
+
+Sets the cover position and tilt in a single command, preventing the motor from stopping between movements. Not all devices support this combined command. If your device does not support it, the action will raise an error.
+
+{% my developer_call_service badge service="overkiz.set_cover_position_and_tilt" %}
+
+| Data attribute | Optional | Description |
+| ---------------------- | -------- | ---------------------- |
+| `position` | no | Target vertical position. 0 means closed, 100 means fully open. |
+| `tilt_position` | no | Target tilt position. 0 means closed, 100 means fully open. |
+
 ## Known limitations
 
 ### Zigbee, Z-Wave, Hue, and Sonos devices not supported
