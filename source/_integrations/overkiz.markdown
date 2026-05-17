@@ -101,7 +101,7 @@ This integration retrieves data from Overkiz every 30 seconds to ensure timely u
 
 ### Action `overkiz.set_cover_position_and_tilt`
 
-Sets the cover position and tilt in a single command, preventing the motor from stopping between movements. Not all devices support this combined command on the Overkiz side. If your device does not support it, the action will raise an error.
+Sets the cover position and tilt in a single command, preventing the motor from stopping between movements. Not all devices support this combined command. If your device does not support it, the action will raise an error.
 
 {% configuration_basic %}
 Position:
